@@ -1,6 +1,6 @@
 import os
 # Import the Flask class.
-from flask import Flask
+from flask import Flask, render_template
 
 # Create an instance of Flask and store it in a variable.
 # The first argument of the Flask class is the name of the
@@ -10,7 +10,7 @@ app = Flask(__name__)
 # app.route decorator - Decorator is a way of wrapping functions
 @app.route("/")
 def index():
-    return "Hello, World"
+    return render_template("index.html")
 
 if __name__ == "__main__":
     app.run(
